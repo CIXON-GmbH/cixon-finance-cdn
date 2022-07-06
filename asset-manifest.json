@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.8a685450.css",
-    "main.js": "/static/js/main.7f662be9.js",
-    "index.html": "/index.html",
-    "main.8a685450.css.map": "/static/css/main.8a685450.css.map",
-    "main.7f662be9.js.map": "/static/js/main.7f662be9.js.map"
+    "main.css": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/css/main.66d66319.css",
+    "main.js": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.1ecdf7e1.js",
+    "static/media/FiraSans-Regular.ttf": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/FiraSans-Regular.f4eb295ecc2fb842d61c.ttf",
+    "static/media/shv-esg-icons.svg?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.01b9b165945e01f9cb46.svg",
+    "static/media/shv-esg-icons.eot?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.e628e6423357b71a0003.eot",
+    "static/media/shv-esg-icons.woff?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.19b4f54365031930426a.woff",
+    "static/media/shv-esg-icons.ttf?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.92ef49e37f3e1ea21534.ttf",
+    "index.html": "https://cixon-gmbh.github.io/cixon-finance-cdn/index.html",
+    "main.66d66319.css.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/css/main.66d66319.css.map",
+    "main.1ecdf7e1.js.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.1ecdf7e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a685450.css",
-    "static/js/main.7f662be9.js"
+    "static/css/main.66d66319.css",
+    "static/js/main.1ecdf7e1.js"
   ]
 }
