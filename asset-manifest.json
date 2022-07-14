@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/css/main.13f85b0e.css",
-    "main.js": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.b13fce83.js",
+    "main.css": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/css/main.4f577099.css",
+    "main.js": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.3b6340bf.js",
     "static/media/FiraSans-Regular.ttf": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/FiraSans-Regular.f4eb295ecc2fb842d61c.ttf",
-    "static/media/shv-esg-icons.svg?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.01b9b165945e01f9cb46.svg",
-    "static/media/shv-esg-icons.eot?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.e628e6423357b71a0003.eot",
-    "static/media/shv-esg-icons.woff?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.19b4f54365031930426a.woff",
-    "static/media/shv-esg-icons.ttf?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.92ef49e37f3e1ea21534.ttf",
+    "static/media/shv-esg-icons.svg?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.64639c88e1cd7753579f.svg",
+    "static/media/shv-esg-icons.eot?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.3d0f7a24e4303aca1d17.eot",
+    "static/media/shv-esg-icons.woff?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.8010f0c6941113071d24.woff",
+    "static/media/shv-esg-icons.ttf?7ihwl6": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/media/shv-esg-icons.79386bc0020f041f0a21.ttf",
     "index.html": "https://cixon-gmbh.github.io/cixon-finance-cdn/index.html",
-    "main.13f85b0e.css.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/css/main.13f85b0e.css.map",
-    "main.b13fce83.js.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.b13fce83.js.map"
+    "main.4f577099.css.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/css/main.4f577099.css.map",
+    "main.3b6340bf.js.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.3b6340bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.13f85b0e.css",
-    "static/js/main.b13fce83.js"
+    "static/css/main.4f577099.css",
+    "static/js/main.3b6340bf.js"
   ]
 }
