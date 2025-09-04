@@ -52975,7 +52975,13 @@
           );
         };
       var tp,
-        np = (function () {
+        np,
+        ip,
+        rp,
+        ap,
+        op,
+        sp,
+        lp = (function () {
           var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = e.createStyledComponent,
             n = void 0 === t ? Kf : t,
@@ -53059,59 +53065,101 @@
             return (0, bl.Z)({ props: e, name: 'MuiContainer' });
           },
         }),
-        ip = np,
-        rp = JSON.parse(
+        cp = lp,
+        up = JSON.parse(
           '{"name":"de","options":{"months":["Januar","Februar","M\xe4rz","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],"shortMonths":["Jan","Feb","M\xe4r","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"],"days":["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],"shortDays":["So","Mo","Di","Mi","Do","Fr","Sa"],"toolbar":{"exportToSVG":"SVG speichern","exportToPNG":"PNG speichern","exportToCSV":"CSV speichern","menu":"Men\xfc","selection":"Auswahl","selectionZoom":"Auswahl vergr\xf6\xdfern","zoomIn":"Vergr\xf6\xdfern","zoomOut":"Verkleinern","pan":"Verschieben","reset":"Zoom zur\xfccksetzen"}}}'
         ),
-        ap = ['1 Monat', '6 Monate', '1 Jahr', '3 Jahr', '5 Jahr', '10 Jahr', 'YTD', 'Gesamt'],
-        op = Array(new Date().getFullYear() - 2007)
+        dp = Eu(
+          tp ||
+            (tp = $r([
+              '\n  query getCdnWidgets($widgetId: String!) {\n    getCdnWidgets(widgetId: $widgetId) {\n      data\n    }\n  }\n',
+            ]))
+        ),
+        hp = Eu(
+          np ||
+            (np = $r([
+              '\n  query getTable($param: tableParam) {\n    getTable(param: $param) {\n      data\n    }\n  }\n',
+            ]))
+        ),
+        fp =
+          (Eu(
+            ip ||
+              (ip = $r([
+                '\n  query getCell($param: tableParam) {\n    getCell(param: $param) {\n      data\n    }\n  }\n',
+              ]))
+          ),
+          Eu(
+            rp ||
+              (rp = $r([
+                '\n  query getAutomatedColumns($param: automatedColumConfigs) {\n    getAutomatedColumns(param: $param)\n  }\n',
+              ]))
+          )),
+        pp = Eu(
+          ap ||
+            (ap = $r([
+              '\n  query getAutomaticTable($param: String!, $fields: [automatedTableField], $limit: String) {\n    getAutomaticTable(param: $param, fields: $fields, limit: $limit) {\n      data\n    }\n  }\n',
+            ]))
+        ),
+        gp = Eu(
+          op ||
+            (op = $r([
+              '\n  query getAutomatedBarChart($isin: String, $type: String) {\n    getAutomatedBarChart(isin: $isin, type: $type) {\n      isin\n      type\n      end\n      value\n    }\n  }\n',
+            ]))
+        ),
+        vp = ['1 Monat', '6 Monate', '1 Jahr', '3 Jahr', '5 Jahr', '10 Jahr', 'YTD', 'Gesamt'],
+        mp = Array(new Date().getFullYear() - 2007)
           .fill(2009)
           .map(function (e, t) {
             return ''.concat(e + t);
           }),
-        sp = function (e) {
-          var t = e.color,
-            n = void 0 === t ? '#003F7A' : t,
-            r = e.content,
-            a = e.isin,
-            o = (0, i.useState)('Gesamt'),
-            s = (0, ne.Z)(o, 2),
-            l = s[0],
-            c = s[1],
-            u = (0, i.useState)([]),
-            d = (0, ne.Z)(u, 2),
-            h = (d[0], d[1]),
-            f = (0, i.useState)([]),
-            p = (0, ne.Z)(f, 2),
-            g = p[0],
-            v = p[1],
-            m = (0, i.useState)([]),
-            y = (0, ne.Z)(m, 2),
-            b = y[0],
-            x = y[1],
-            w = (0, i.useState)([]),
-            k = (0, ne.Z)(w, 2),
-            S = k[0],
-            C = k[1],
-            A = (0, i.useState)(ap),
-            E = (0, ne.Z)(A, 2),
-            _ = E[0],
-            T = (E[1], '#003F7A' === n),
-            P = (0, i.useState)(!1),
-            O = (0, ne.Z)(P, 2),
-            M = O[0],
-            I = O[1],
-            D = (0, i.useState)(),
-            N = (0, ne.Z)(D, 2),
-            L = N[0],
-            R = N[1],
-            F = {
+        yp = function (e) {
+          var t,
+            n = e.color,
+            r = void 0 === n ? '#003F7A' : n,
+            a = e.content,
+            o = e.isin,
+            s = (0, i.useState)('Gesamt'),
+            l = (0, ne.Z)(s, 2),
+            c = l[0],
+            u = l[1],
+            d = (0, i.useState)([]),
+            h = (0, ne.Z)(d, 2),
+            f = (h[0], h[1]),
+            p = (0, i.useState)([]),
+            g = (0, ne.Z)(p, 2),
+            v = g[0],
+            m = g[1],
+            y = (0, i.useState)([]),
+            b = (0, ne.Z)(y, 2),
+            x = b[0],
+            w = b[1],
+            k = (0, i.useState)([]),
+            S = (0, ne.Z)(k, 2),
+            C = S[0],
+            A = S[1],
+            E = (0, i.useState)(vp),
+            _ = (0, ne.Z)(E, 2),
+            T = _[0],
+            P = (_[1], '#003F7A' === r),
+            O = (0, i.useState)(!1),
+            M = (0, ne.Z)(O, 2),
+            I = M[0],
+            D = M[1],
+            N = (0, i.useState)(),
+            L = (0, ne.Z)(N, 2),
+            R = L[0],
+            F = L[1],
+            z = (0, i.useState)(''),
+            j = (0, ne.Z)(z, 2),
+            Y = j[0],
+            W = j[1],
+            B = {
               chart: {
                 id: 'area-datetime',
                 type: 'area',
                 height: 350,
                 zoom: { autoScaleYaxis: !0 },
-                locales: [rp],
+                locales: [up],
                 defaultLocale: 'de',
               },
               animations: { enabled: !1 },
@@ -53125,9 +53173,9 @@
               annotations: {
                 xaxis: [
                   {
-                    borderColor: n,
+                    borderColor: r,
                     tooltip: { enabled: !1 },
-                    label: { text: 'Rally', style: { color: '#fff', background: n } },
+                    label: { text: 'Rally', style: { color: '#fff', background: r } },
                   },
                 ],
               },
@@ -53137,35 +53185,35 @@
               yaxis: {
                 labels: {
                   formatter: function (e) {
-                    return ''.concat(e ? e.toFixed(2) : 0).concat(null !== r && void 0 !== r && r.isPercent ? '%' : '');
+                    return ''.concat(e ? e.toFixed(2) : 0).concat(null !== a && void 0 !== a && a.isPercent ? '%' : '');
                   },
                 },
               },
               tooltip: { x: { format: 'MMM dd yyyy' } },
-              colors: [(null === r || void 0 === r ? void 0 : r.theme) || n],
-              fill: T
+              colors: [(null === a || void 0 === a ? void 0 : a.theme) || r],
+              fill: P
                 ? {
                     type: 'gradient',
                     gradient: { shadeIntensity: 1, opacityFrom: 0.7, opacityTo: 0.9, stops: [0, 100] },
                   }
                 : { type: ['solid', 'solid'], opacity: [0.2, 0] },
             },
-            z = (function () {
+            Z = (function () {
               var e = il(
                 tl().mark(function e(t, n, i) {
                   var r,
-                    o = arguments;
+                    a = arguments;
                   return tl().wrap(function (e) {
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
                           return (
-                            (r = o.length > 3 && void 0 !== o[3] ? o[3] : ''),
+                            (r = a.length > 3 && void 0 !== a[3] ? a[3] : ''),
                             e.abrupt(
                               'return',
                               kg.query({
                                 query: Wu,
-                                variables: { param: { type: i || 'Axxion', isin: n || a, mode: t, until: r } },
+                                variables: { param: { type: i || 'Axxion', isin: n || o, mode: t, until: r } },
                               })
                             )
                           );
@@ -53179,20 +53227,65 @@
               return function (t, n, i) {
                 return e.apply(this, arguments);
               };
+            })(),
+            H = (function () {
+              var e = il(
+                tl().mark(function e(t) {
+                  return tl().wrap(function (e) {
+                    for (;;)
+                      switch ((e.prev = e.next)) {
+                        case 0:
+                          return e.abrupt(
+                            'return',
+                            kg.query({ query: fp, variables: { param: { data: t, isin: o } } })
+                          );
+                        case 1:
+                        case 'end':
+                          return e.stop();
+                      }
+                  }, e);
+                })
+              );
+              return function (t) {
+                return e.apply(this, arguments);
+              };
             })();
           (0, i.useEffect)(
             function () {
-              ((null !== r && void 0 !== r && r.isin) || a) &&
-                z(
+              ((null !== a && void 0 !== a && a.isin) || o) &&
+                Z(
                   'today',
-                  null === r || void 0 === r ? void 0 : r.isin,
-                  null === r || void 0 === r ? void 0 : r.chartType
+                  null === a || void 0 === a ? void 0 : a.isin,
+                  null === a || void 0 === a ? void 0 : a.chartType
                 ).then(function (e) {
-                  h(e.data.getQuery.histories);
+                  f(e.data.getQuery.histories);
                 });
             },
-            [a, null === r || void 0 === r ? void 0 : r.isin]
+            [o, null === a || void 0 === a ? void 0 : a.isin]
           ),
+            (0, i.useEffect)(
+              function () {
+                null !== a &&
+                  void 0 !== a &&
+                  a.title &&
+                  'object' === typeof a.title &&
+                  a.title.isDynamic &&
+                  H([null === a || void 0 === a ? void 0 : a.title]).then(function (e) {
+                    var t, n, i;
+                    W(
+                      null === (t = e.data) ||
+                        void 0 === t ||
+                        null === (n = t.getAutomatedColumns) ||
+                        void 0 === n ||
+                        null === (i = n[0]) ||
+                        void 0 === i
+                        ? void 0
+                        : i[0]
+                    );
+                  });
+              },
+              [null === a || void 0 === a ? void 0 : a.title]
+            ),
             (0, i.useEffect)(
               function () {
                 il(
@@ -53201,14 +53294,14 @@
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            if ((I(!0), v([]), x([]), !((null !== r && void 0 !== r && r.isin) || a))) {
+                            if ((D(!0), m([]), w([]), !((null !== a && void 0 !== a && a.isin) || o))) {
                               e.next = 6;
                               break;
                             }
                             return (
                               (e.next = 6),
                               Promise.all(
-                                op.map(
+                                mp.map(
                                   (function () {
                                     var e = il(
                                       tl().mark(function e(t, n) {
@@ -53219,21 +53312,21 @@
                                                 return e.abrupt(
                                                   'return',
                                                   new Promise(function (e, n) {
-                                                    z(
+                                                    Z(
                                                       'all',
-                                                      null === r || void 0 === r ? void 0 : r.isin,
-                                                      null === r || void 0 === r ? void 0 : r.chartType,
+                                                      null === a || void 0 === a ? void 0 : a.isin,
+                                                      null === a || void 0 === a ? void 0 : a.chartType,
                                                       t
                                                     )
                                                       .then(function (t) {
-                                                        v(function (e) {
+                                                        m(function (e) {
                                                           return []
                                                             .concat((0, ie.Z)(e), (0, ie.Z)(t.data.getQuery.histories))
                                                             .sort(function (e, t) {
                                                               return +new Date(e[0]) - +new Date(t[0]);
                                                             });
                                                         }),
-                                                          x(function (e) {
+                                                          w(function (e) {
                                                             return []
                                                               .concat(
                                                                 (0, ie.Z)(e),
@@ -53265,7 +53358,7 @@
                               )
                             );
                           case 6:
-                            I(!1);
+                            D(!1);
                           case 7:
                           case 'end':
                             return e.stop();
@@ -53274,19 +53367,19 @@
                   })
                 )();
               },
-              [a, null === r || void 0 === r ? void 0 : r.isin]
+              [o, null === a || void 0 === a ? void 0 : a.isin]
             ),
             (0, i.useEffect)(
               function () {
                 var e;
-                null !== r &&
-                  void 0 !== r &&
-                  null !== (e = r.additionalIsins) &&
+                null !== a &&
+                  void 0 !== a &&
+                  null !== (e = a.additionalIsins) &&
                   void 0 !== e &&
                   e.length &&
-                  (null === r ||
-                    void 0 === r ||
-                    r.additionalIsins.forEach(
+                  (null === a ||
+                    void 0 === a ||
+                    a.additionalIsins.forEach(
                       (function () {
                         var e = il(
                           tl().mark(function e(t) {
@@ -53302,7 +53395,7 @@
                                     return (
                                       (e.next = 4),
                                       Promise.all(
-                                        op.map(
+                                        mp.map(
                                           (function () {
                                             var e = il(
                                               tl().mark(function e(i, r) {
@@ -53313,7 +53406,7 @@
                                                         return e.abrupt(
                                                           'return',
                                                           new Promise(function (e, r) {
-                                                            z(
+                                                            Z(
                                                               'all',
                                                               n,
                                                               (null === t || void 0 === t ? void 0 : t.chartType) ||
@@ -53325,7 +53418,7 @@
                                                                   r = (null === (i = n.data.getQuery) || void 0 === i
                                                                     ? void 0
                                                                     : i.histories) || [[]];
-                                                                C(function (e) {
+                                                                A(function (e) {
                                                                   return e.some(function (e) {
                                                                     return e.id === t.id;
                                                                   })
@@ -53391,34 +53484,34 @@
                       })()
                     ));
               },
-              [r]
+              [a]
             );
-          var j = (0, i.useMemo)(
+          var V = (0, i.useMemo)(
               function () {
-                if (b.length && null !== r && void 0 !== r && r.isPercent) {
-                  var e = b[0][1];
+                if (x.length && null !== a && void 0 !== a && a.isPercent) {
+                  var e = x[0][1];
                   return (
-                    R(b[0]),
-                    b.map(function (t) {
+                    F(x[0]),
+                    x.map(function (t) {
                       return [t[0], 100 * (t[1] / e - 1)];
                     })
                   );
                 }
-                return b;
+                return x;
               },
-              [b, null === r || void 0 === r ? void 0 : r.isPercent]
+              [x, null === a || void 0 === a ? void 0 : a.isPercent]
             ),
-            Y = (0, i.useMemo)(
+            X = (0, i.useMemo)(
               function () {
-                return L && null !== r && void 0 !== r && r.isPercent
-                  ? S.map(function (e) {
+                return R && null !== a && void 0 !== a && a.isPercent
+                  ? C.map(function (e) {
                       var t,
                         n = e.data;
                       if (n.length) {
                         var i = n.findIndex(function (e) {
-                          return e[0] > L[0];
+                          return e[0] > R[0];
                         });
-                        (t = n.slice(i)), n[i - 1] && t.unshift([L[0], n[i - 1][1]]);
+                        (t = n.slice(i)), n[i - 1] && t.unshift([R[0], n[i - 1][1]]);
                       } else t = [];
                       return Zf(
                         Zf({}, e),
@@ -53434,34 +53527,38 @@
                         }
                       );
                     })
-                  : S;
+                  : C;
               },
-              [S, L, null === r || void 0 === r ? void 0 : r.isPercent]
+              [C, R, null === a || void 0 === a ? void 0 : a.isPercent]
             );
           return (0, Rr.jsxs)(gl, {
             position: 'relative',
             children: [
-              M &&
+              I &&
                 (0, Rr.jsx)(gl, {
-                  className: 'chart-loader '.concat(n),
-                  children: (0, Rr.jsx)(Lf, { sx: { color: n } }),
+                  className: 'chart-loader '.concat(r),
+                  children: (0, Rr.jsx)(Lf, { sx: { color: r } }),
                 }),
-              (null === r || void 0 === r ? void 0 : r.title) &&
+              ('string' === typeof (null === a || void 0 === a ? void 0 : a.title) ||
+                ('object' === typeof (null === a || void 0 === a ? void 0 : a.title) &&
+                  (null === a || void 0 === a || null === (t = a.title) || void 0 === t ? void 0 : t.isDynamic) &&
+                  Y)) &&
                 (0, Rr.jsx)('div', {
                   className: 'widget-title',
-                  style: { color: '#ccd5df' === n ? '#003F7A' : n },
-                  children: null === r || void 0 === r ? void 0 : r.title,
+                  style: { color: '#ccd5df' === r ? '#003F7A' : r },
+                  children:
+                    'object' === typeof a.title && a.title.isDynamic ? Y : 'string' === typeof a.title ? a.title : '',
                 }),
               (0, Rr.jsx)(Cl, {
                 spacing: 2,
                 direction: 'row',
                 justifyContent: 'center',
-                children: _.filter(function (e) {
+                children: T.filter(function (e) {
                   return (
-                    null === r ||
-                    void 0 === r ||
-                    !r.ranges ||
-                    (null === r || void 0 === r ? void 0 : r.ranges.includes(e))
+                    null === a ||
+                    void 0 === a ||
+                    !a.ranges ||
+                    (null === a || void 0 === a ? void 0 : a.ranges.includes(e))
                   );
                 }).map(function (e, t) {
                   return (0, Rr.jsx)(
@@ -53469,8 +53566,8 @@
                     {
                       sx: {
                         backgroundColor:
-                          e === l ? (null === r || void 0 === r ? void 0 : r.theme) || n || '#003F7A' : 'inherit',
-                        color: e === l ? 'white' : (null === r || void 0 === r ? void 0 : r.theme) || n || '#003F7A',
+                          e === c ? (null === a || void 0 === a ? void 0 : a.theme) || r || '#003F7A' : 'inherit',
+                        color: e === c ? 'white' : (null === a || void 0 === a ? void 0 : a.theme) || r || '#003F7A',
                       },
                       onClick: function () {
                         return (function (e) {
@@ -53526,31 +53623,31 @@
                               (0, Vs.Z)(t, 'YTD', Mc()().startOf('year').valueOf().toString()),
                               (0, Vs.Z)(t, 'Gesamt', Mc()().valueOf().toString()),
                               t);
-                          if ('Gesamt' === e) x(g);
+                          if ('Gesamt' === e) w(v);
                           else {
-                            var a,
+                            var r,
                               o,
                               s,
-                              l = g.filter(function (t) {
+                              l = v.filter(function (t) {
                                 return t[0] >= +i[e] && t[0] <= +n;
                               }),
-                              u =
-                                null === (a = S[0]) || void 0 === a || null === (o = a.data) || void 0 === o
+                              c =
+                                null === (r = C[0]) || void 0 === r || null === (o = r.data) || void 0 === o
                                   ? void 0
                                   : o.filter(function (t) {
                                       return t[0] >= +i[e] && t[0] <= +n;
                                     });
                             '1 Monat' === e &&
-                              u &&
-                              u.length &&
-                              l[0][0] <= u[0][0] &&
+                              c &&
+                              c.length &&
+                              l[0][0] <= c[0][0] &&
                               (l = l.filter(function (e) {
-                                return e[0] >= u[0][0];
+                                return e[0] >= c[0][0];
                               })),
-                              z(
+                              Z(
                                 e,
-                                null === r || void 0 === r ? void 0 : r.isin,
-                                null === r || void 0 === r ? void 0 : r.chartType
+                                null === a || void 0 === a ? void 0 : a.isin,
+                                null === a || void 0 === a ? void 0 : a.chartType
                               ).then(function (t) {
                                 for (
                                   var n = [], i = 0;
@@ -53649,15 +53746,15 @@
                                   }
                                   i++;
                                 }
-                                x(function (e) {
+                                w(function (e) {
                                   return [].concat((0, ie.Z)(e), (0, ie.Z)(n)).sort(function (e, t) {
                                     return +new Date(e[0]) - +new Date(t[0]);
                                   });
                                 });
                               }),
-                              null === r ||
-                                void 0 === r ||
-                                null === (s = r.additionalIsins) ||
+                              null === a ||
+                                void 0 === a ||
+                                null === (s = a.additionalIsins) ||
                                 void 0 === s ||
                                 s.forEach(
                                   (function () {
@@ -53675,7 +53772,7 @@
                                                 return t.abrupt(
                                                   'return',
                                                   new Promise(function (t, r) {
-                                                    z(
+                                                    Z(
                                                       e,
                                                       i,
                                                       (null === n || void 0 === n ? void 0 : n.chartType) || 'SolActive'
@@ -53814,7 +53911,7 @@
                                                             }
                                                             l++;
                                                           }
-                                                        C(function (e) {
+                                                        A(function (e) {
                                                           return e.some(function (e) {
                                                             return e.id === n.id;
                                                           })
@@ -53854,12 +53951,12 @@
                                     };
                                   })()
                                 ),
-                              x(l);
+                              w(l);
                           }
-                          c(e);
+                          u(e);
                         })(e);
                       },
-                      variant: e === l ? 'contained' : 'text',
+                      variant: e === c ? 'contained' : 'text',
                       children: e,
                     },
                     t
@@ -53867,22 +53964,22 @@
                 }),
               }),
               (0, Rr.jsx)(Pc.Z, {
-                options: F,
+                options: B,
                 series: [
                   {
                     name:
-                      (null === r || void 0 === r ? void 0 : r.chartTitle) || 'Frankfurter UCITS-ETF - Modern Value',
-                    data: j,
+                      (null === a || void 0 === a ? void 0 : a.chartTitle) || 'Frankfurter UCITS-ETF - Modern Value',
+                    data: V,
                   },
-                ].concat((0, ie.Z)(null !== Y && void 0 !== Y && Y.length ? Y : [])),
+                ].concat((0, ie.Z)(null !== X && void 0 !== X && X.length ? X : [])),
                 type: 'area',
                 height: 350,
               }),
-              (0, Rr.jsx)(ip, {
+              (0, Rr.jsx)(cp, {
                 maxWidth: 'md',
                 children:
-                  void 0 !== (null === r || void 0 === r ? void 0 : r.chartText)
-                    ? (0, Rr.jsx)(Od, { children: r.chartText })
+                  void 0 !== (null === a || void 0 === a ? void 0 : a.chartText)
+                    ? (0, Rr.jsx)(Od, { children: a.chartText })
                     : (0, Rr.jsx)(Od, {
                         children:
                           'Wertentwicklungen in der Vergangenheit sind kein verl\xe4sslicher Indikator f\xfcr die k\xfcnftige Wertentwicklung.',
@@ -53891,9 +53988,9 @@
             ],
           });
         },
-        lp = (n(8457), n(3070));
-      function cp() {
-        if (tp) return tp;
+        bp = (n(8457), n(3070));
+      function xp() {
+        if (sp) return sp;
         var e = document.createElement('div'),
           t = document.createElement('div');
         return (
@@ -53908,16 +54005,16 @@
           (e.style.top = '-1000px'),
           (e.style.overflow = 'scroll'),
           document.body.appendChild(e),
-          (tp = 'reverse'),
-          e.scrollLeft > 0 ? (tp = 'default') : ((e.scrollLeft = 1), 0 === e.scrollLeft && (tp = 'negative')),
+          (sp = 'reverse'),
+          e.scrollLeft > 0 ? (sp = 'default') : ((e.scrollLeft = 1), 0 === e.scrollLeft && (sp = 'negative')),
           document.body.removeChild(e),
-          tp
+          sp
         );
       }
-      function up(e, t) {
+      function wp(e, t) {
         var n = e.scrollLeft;
         if ('rtl' !== t) return n;
-        switch (cp()) {
+        switch (xp()) {
           case 'negative':
             return e.scrollWidth - e.clientWidth + n;
           case 'reverse':
@@ -53926,14 +54023,14 @@
             return n;
         }
       }
-      function dp(e) {
+      function kp(e) {
         return (1 + Math.sin(Math.PI * e - Math.PI / 2)) / 2;
       }
-      function hp(e, t, n) {
+      function Sp(e, t, n) {
         var i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
           r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : function () {},
           a = i.ease,
-          o = void 0 === a ? dp : a,
+          o = void 0 === a ? kp : a,
           s = i.duration,
           l = void 0 === s ? 300 : s,
           c = null,
@@ -53957,26 +54054,26 @@
           };
         return u === n ? (r(new Error('Element already at target position')), h) : (requestAnimationFrame(f), h);
       }
-      var fp = n(5572),
-        pp = ['onChange'],
-        gp = { width: 99, height: 99, position: 'absolute', top: -9999, overflow: 'scroll' };
-      var vp = n(6189),
-        mp = (0, vp.Z)(
+      var Cp = n(5572),
+        Ap = ['onChange'],
+        Ep = { width: 99, height: 99, position: 'absolute', top: -9999, overflow: 'scroll' };
+      var _p = n(6189),
+        Tp = (0, _p.Z)(
           (0, Rr.jsx)('path', { d: 'M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z' }),
           'KeyboardArrowLeft'
         ),
-        yp = (0, vp.Z)(
+        Pp = (0, _p.Z)(
           (0, Rr.jsx)('path', { d: 'M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z' }),
           'KeyboardArrowRight'
         );
-      function bp(e) {
+      function Op(e) {
         return (0, cc.ZP)('MuiTabScrollButton', e);
       }
-      var xp,
-        wp,
-        kp = (0, Vl.Z)('MuiTabScrollButton', ['root', 'vertical', 'horizontal', 'disabled']),
-        Sp = ['className', 'direction', 'orientation', 'disabled'],
-        Cp = (0, yl.ZP)(vc, {
+      var Mp,
+        Ip,
+        Dp = (0, Vl.Z)('MuiTabScrollButton', ['root', 'vertical', 'horizontal', 'disabled']),
+        Np = ['className', 'direction', 'orientation', 'disabled'],
+        Lp = (0, yl.ZP)(vc, {
           name: 'MuiTabScrollButton',
           slot: 'Root',
           overridesResolver: function (e, t) {
@@ -53986,34 +54083,28 @@
         })(function (e) {
           var t = e.ownerState;
           return (0,
-          Ir.Z)((0, Vs.Z)({ width: 40, flexShrink: 0, opacity: 0.8 }, '&.'.concat(kp.disabled), { opacity: 0 }), 'vertical' === t.orientation && { width: '100%', height: 40, '& svg': { transform: 'rotate('.concat(t.isRtl ? -90 : 90, 'deg)') } });
+          Ir.Z)((0, Vs.Z)({ width: 40, flexShrink: 0, opacity: 0.8 }, '&.'.concat(Dp.disabled), { opacity: 0 }), 'vertical' === t.orientation && { width: '100%', height: 40, '& svg': { transform: 'rotate('.concat(t.isRtl ? -90 : 90, 'deg)') } });
         }),
-        Ap = i.forwardRef(function (e, t) {
+        Rp = i.forwardRef(function (e, t) {
           var n = (0, bl.Z)({ props: e, name: 'MuiTabScrollButton' }),
             i = n.className,
             r = n.direction,
-            a = (0, rl.Z)(n, Sp),
+            a = (0, rl.Z)(n, Np),
             o = 'rtl' === ah().direction,
             s = (0, Ir.Z)({ isRtl: o }, n),
             l = (function (e) {
               var t = e.classes,
                 n = { root: ['root', e.orientation, e.disabled && 'disabled'] };
-              return (0, El.Z)(n, bp, t);
+              return (0, El.Z)(n, Op, t);
             })(s);
           return (0,
-          Rr.jsx)(Cp, (0, Ir.Z)({ component: 'div', className: (0, al.Z)(l.root, i), ref: t, role: null, ownerState: s, tabIndex: null }, a, { children: 'left' === r ? xp || (xp = (0, Rr.jsx)(mp, { fontSize: 'small' })) : wp || (wp = (0, Rr.jsx)(yp, { fontSize: 'small' })) }));
+          Rr.jsx)(Lp, (0, Ir.Z)({ component: 'div', className: (0, al.Z)(l.root, i), ref: t, role: null, ownerState: s, tabIndex: null }, a, { children: 'left' === r ? Mp || (Mp = (0, Rr.jsx)(Tp, { fontSize: 'small' })) : Ip || (Ip = (0, Rr.jsx)(Pp, { fontSize: 'small' })) }));
         });
-      function Ep(e) {
+      function Fp(e) {
         return (0, cc.ZP)('MuiTabs', e);
       }
-      var _p,
-        Tp,
-        Pp,
-        Op,
-        Mp,
-        Ip,
-        Dp,
-        Np = (0, Vl.Z)('MuiTabs', [
+      var zp,
+        jp = (0, Vl.Z)('MuiTabs', [
           'root',
           'vertical',
           'flexContainer',
@@ -54028,8 +54119,8 @@
           'scrollButtonsHideMobile',
           'indicator',
         ]),
-        Lp = n(8301),
-        Rp = [
+        Yp = n(8301),
+        Wp = [
           'aria-label',
           'aria-labelledby',
           'action',
@@ -54051,13 +54142,13 @@
           'variant',
           'visibleScrollbar',
         ],
-        Fp = function (e, t) {
+        Bp = function (e, t) {
           return e === t ? e.firstChild : t && t.nextElementSibling ? t.nextElementSibling : e.firstChild;
         },
-        zp = function (e, t) {
+        Zp = function (e, t) {
           return e === t ? e.lastChild : t && t.previousElementSibling ? t.previousElementSibling : e.lastChild;
         },
-        jp = function (e, t, n) {
+        Hp = function (e, t, n) {
           for (var i = !1, r = n(e, t); r; ) {
             if (r === e.firstChild) {
               if (i) return;
@@ -54068,14 +54159,14 @@
             r = n(e, r);
           }
         },
-        Yp = (0, yl.ZP)('div', {
+        Vp = (0, yl.ZP)('div', {
           name: 'MuiTabs',
           slot: 'Root',
           overridesResolver: function (e, t) {
             var n = e.ownerState;
             return [
-              (0, Vs.Z)({}, '& .'.concat(Np.scrollButtons), t.scrollButtons),
-              (0, Vs.Z)({}, '& .'.concat(Np.scrollButtons), n.scrollButtonsHideMobile && t.scrollButtonsHideMobile),
+              (0, Vs.Z)({}, '& .'.concat(jp.scrollButtons), t.scrollButtons),
+              (0, Vs.Z)({}, '& .'.concat(jp.scrollButtons), n.scrollButtonsHideMobile && t.scrollButtonsHideMobile),
               t.root,
               n.vertical && t.vertical,
             ];
@@ -54084,9 +54175,9 @@
           var t = e.ownerState,
             n = e.theme;
           return (0,
-          Ir.Z)({ overflow: 'hidden', minHeight: 48, WebkitOverflowScrolling: 'touch', display: 'flex' }, t.vertical && { flexDirection: 'column' }, t.scrollButtonsHideMobile && (0, Vs.Z)({}, '& .'.concat(Np.scrollButtons), (0, Vs.Z)({}, n.breakpoints.down('sm'), { display: 'none' })));
+          Ir.Z)({ overflow: 'hidden', minHeight: 48, WebkitOverflowScrolling: 'touch', display: 'flex' }, t.vertical && { flexDirection: 'column' }, t.scrollButtonsHideMobile && (0, Vs.Z)({}, '& .'.concat(jp.scrollButtons), (0, Vs.Z)({}, n.breakpoints.down('sm'), { display: 'none' })));
         }),
-        Wp = (0, yl.ZP)('div', {
+        Xp = (0, yl.ZP)('div', {
           name: 'MuiTabs',
           slot: 'Scroller',
           overridesResolver: function (e, t) {
@@ -54104,7 +54195,7 @@
           return (0,
           Ir.Z)({ position: 'relative', display: 'inline-block', flex: '1 1 auto', whiteSpace: 'nowrap' }, t.fixed && { overflowX: 'hidden', width: '100%' }, t.hideScrollbar && { scrollbarWidth: 'none', '&::-webkit-scrollbar': { display: 'none' } }, t.scrollableX && { overflowX: 'auto', overflowY: 'hidden' }, t.scrollableY && { overflowY: 'auto', overflowX: 'hidden' });
         }),
-        Bp = (0, yl.ZP)('div', {
+        Gp = (0, yl.ZP)('div', {
           name: 'MuiTabs',
           slot: 'FlexContainer',
           overridesResolver: function (e, t) {
@@ -54116,7 +54207,7 @@
           return (0,
           Ir.Z)({ display: 'flex' }, t.vertical && { flexDirection: 'column' }, t.centered && { justifyContent: 'center' });
         }),
-        Zp = (0, yl.ZP)('span', {
+        Up = (0, yl.ZP)('span', {
           name: 'MuiTabs',
           slot: 'Indicator',
           overridesResolver: function (e, t) {
@@ -54128,10 +54219,10 @@
           return (0,
           Ir.Z)({ position: 'absolute', height: 2, bottom: 0, width: '100%', transition: n.transitions.create() }, 'primary' === t.indicatorColor && { backgroundColor: (n.vars || n).palette.primary.main }, 'secondary' === t.indicatorColor && { backgroundColor: (n.vars || n).palette.secondary.main }, t.vertical && { height: '100%', width: 2, right: 0 });
         }),
-        Hp = (0, yl.ZP)(
+        qp = (0, yl.ZP)(
           function (e) {
             var t = e.onChange,
-              n = (0, rl.Z)(e, pp),
+              n = (0, rl.Z)(e, Ap),
               r = i.useRef(),
               a = i.useRef(null),
               o = function () {
@@ -54140,11 +54231,11 @@
             return (
               i.useEffect(
                 function () {
-                  var e = (0, lp.Z)(function () {
+                  var e = (0, bp.Z)(function () {
                       var e = r.current;
                       o(), e !== r.current && t(r.current);
                     }),
-                    n = (0, fp.Z)(a.current);
+                    n = (0, Cp.Z)(a.current);
                   return (
                     n.addEventListener('resize', e),
                     function () {
@@ -54160,7 +54251,7 @@
                 },
                 [t]
               ),
-              (0, Rr.jsx)('div', (0, Ir.Z)({ style: gp, ref: a }, n))
+              (0, Rr.jsx)('div', (0, Ir.Z)({ style: Ep, ref: a }, n))
             );
           },
           { name: 'MuiTabs', slot: 'ScrollbarSize' }
@@ -54170,8 +54261,8 @@
           scrollbarWidth: 'none',
           '&::-webkit-scrollbar': { display: 'none' },
         }),
-        Vp = {},
-        Xp = i.forwardRef(function (e, t) {
+        Qp = {},
+        $p = i.forwardRef(function (e, t) {
           var n = (0, bl.Z)({ props: e, name: 'MuiTabs' }),
             r = ah(),
             a = 'rtl' === r.direction,
@@ -54192,7 +54283,7 @@
             x = n.orientation,
             w = void 0 === x ? 'horizontal' : x,
             k = n.ScrollButtonComponent,
-            S = void 0 === k ? Ap : k,
+            S = void 0 === k ? Rp : k,
             C = n.scrollButtons,
             A = void 0 === C ? 'auto' : C,
             E = n.selectionFollowsFocus,
@@ -54207,7 +54298,7 @@
             L = void 0 === N ? 'standard' : N,
             R = n.visibleScrollbar,
             F = void 0 !== R && R,
-            z = (0, rl.Z)(n, Rp),
+            z = (0, rl.Z)(n, Wp),
             j = 'scrollable' === L,
             Y = 'vertical' === w,
             W = Y ? 'scrollTop' : 'scrollLeft',
@@ -54250,13 +54341,13 @@
                   scrollableX: [r && 'scrollableX'],
                   hideScrollbar: [i && 'hideScrollbar'],
                 };
-              return (0, El.Z)(c, Ep, l);
+              return (0, El.Z)(c, Fp, l);
             })(X);
           var U = i.useState(!1),
             q = (0, ne.Z)(U, 2),
             Q = q[0],
             $ = q[1],
-            K = i.useState(Vp),
+            K = i.useState(Qp),
             J = (0, ne.Z)(K, 2),
             ee = J[0],
             te = J[1],
@@ -54281,7 +54372,7 @@
                   clientWidth: n.clientWidth,
                   scrollLeft: n.scrollLeft,
                   scrollTop: n.scrollTop,
-                  scrollLeftNormalized: up(n, r.direction),
+                  scrollLeftNormalized: wp(n, r.direction),
                   scrollWidth: n.scrollWidth,
                   top: i.top,
                   bottom: i.bottom,
@@ -54322,11 +54413,11 @@
               var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = t.animation,
                 i = void 0 === n || n;
-              i ? hp(W, he.current, e, { duration: r.transitions.duration.standard }) : (he.current[W] = e);
+              i ? Sp(W, he.current, e, { duration: r.transitions.duration.standard }) : (he.current[W] = e);
             },
             me = function (e) {
               var t = he.current[W];
-              Y ? (t += e) : ((t += e * (a ? -1 : 1)), (t *= a && 'reverse' === cp() ? -1 : 1)), ve(t);
+              Y ? (t += e) : ((t += e * (a ? -1 : 1)), (t *= a && 'reverse' === xp() ? -1 : 1)), ve(t);
             },
             ye = function () {
               for (var e = he.current[H], t = 0, n = Array.from(fe.current.children), i = 0; i < n.length; i += 1) {
@@ -54373,7 +54464,7 @@
                   c = n.clientWidth;
                 if (Y) (e = i > 1), (t = i < o - s - 1);
                 else {
-                  var u = up(he.current, r.direction);
+                  var u = wp(he.current, r.direction);
                   (e = a ? u < l - c - 1 : u > 1), (t = a ? u > 1 : u < l - c - 1);
                 }
                 (e === ae.start && t === ae.end) || oe({ start: e, end: t });
@@ -54382,10 +54473,10 @@
           i.useEffect(
             function () {
               var e,
-                t = (0, lp.Z)(function () {
+                t = (0, bp.Z)(function () {
                   he.current && (ge(), Se());
                 }),
-                n = (0, fp.Z)(he.current);
+                n = (0, Cp.Z)(he.current);
               return (
                 n.addEventListener('resize', t),
                 'undefined' !== typeof ResizeObserver &&
@@ -54402,7 +54493,7 @@
           );
           var Ce = i.useMemo(
             function () {
-              return (0, lp.Z)(function () {
+              return (0, bp.Z)(function () {
                 Se();
               });
             },
@@ -54424,7 +54515,7 @@
             }),
             i.useEffect(
               function () {
-                ke(Vp !== ee);
+                ke(Qp !== ee);
               },
               [ke, ee]
             ),
@@ -54436,7 +54527,7 @@
               [ge, Se]
             );
           var Ae = (0, Rr.jsx)(
-              Zp,
+              Up,
               (0, Ir.Z)({}, T, {
                 className: (0, al.Z)(G.indicator, T.className),
                 ownerState: X,
@@ -54471,7 +54562,7 @@
             Te = (function () {
               var e = {};
               e.scrollbarSizeListener = j
-                ? (0, Rr.jsx)(Hp, { onChange: we, className: (0, al.Z)(G.scrollableX, G.hideScrollbar) })
+                ? (0, Rr.jsx)(qp, { onChange: we, className: (0, al.Z)(G.scrollableX, G.hideScrollbar) })
                 : null;
               var t = ae.start || ae.end,
                 n = j && (('auto' === A && t) || !0 === A);
@@ -54500,12 +54591,12 @@
               );
             })();
           return (0, Rr.jsxs)(
-            Yp,
+            Vp,
             (0, Ir.Z)({ className: (0, al.Z)(G.root, h), ownerState: X, ref: t, as: p }, z, {
               children: [
                 Te.scrollButtonStart,
                 Te.scrollbarSizeListener,
-                (0, Rr.jsxs)(Wp, {
+                (0, Rr.jsxs)(Xp, {
                   className: G.scroller,
                   ownerState: X,
                   style: (0, Vs.Z)(
@@ -54516,7 +54607,7 @@
                   ref: he,
                   onScroll: Ce,
                   children: [
-                    (0, Rr.jsx)(Bp, {
+                    (0, Rr.jsx)(Gp, {
                       'aria-label': o,
                       'aria-labelledby': s,
                       'aria-orientation': 'vertical' === w ? 'vertical' : null,
@@ -54524,22 +54615,22 @@
                       ownerState: X,
                       onKeyDown: function (e) {
                         var t = fe.current,
-                          n = (0, Lp.Z)(t).activeElement;
+                          n = (0, Yp.Z)(t).activeElement;
                         if ('tab' === n.getAttribute('role')) {
                           var i = 'horizontal' === w ? 'ArrowLeft' : 'ArrowUp',
                             r = 'horizontal' === w ? 'ArrowRight' : 'ArrowDown';
                           switch (('horizontal' === w && a && ((i = 'ArrowRight'), (r = 'ArrowLeft')), e.key)) {
                             case i:
-                              e.preventDefault(), jp(t, n, zp);
+                              e.preventDefault(), Hp(t, n, Zp);
                               break;
                             case r:
-                              e.preventDefault(), jp(t, n, Fp);
+                              e.preventDefault(), Hp(t, n, Bp);
                               break;
                             case 'Home':
-                              e.preventDefault(), jp(t, null, Fp);
+                              e.preventDefault(), Hp(t, null, Bp);
                               break;
                             case 'End':
-                              e.preventDefault(), jp(t, null, zp);
+                              e.preventDefault(), Hp(t, null, Zp);
                           }
                         }
                       },
@@ -54555,8 +54646,8 @@
             })
           );
         }),
-        Gp = Xp,
-        Up = (0, yl.ZP)(gl)({
+        Kp = $p,
+        Jp = (0, yl.ZP)(gl)({
           '.chart-loader': {
             position: 'absolute',
             width: '100%',
@@ -54809,7 +54900,7 @@
           },
           '& .apexcharts-zoom-icon.apexcharts-selected': { svg: { fill: '#6E8192 !important' } },
         }),
-        qp = (0, yl.ZP)(Gp)({
+        eg = (0, yl.ZP)(Kp)({
           background: '#ccd5df',
           display: 'flex',
           alignItems: 'center',
@@ -54932,7 +55023,7 @@
             },
           },
         }),
-        Qp = [
+        tg = [
           {
             label: 'PORTRAIT',
             id: 1,
@@ -55023,7 +55114,7 @@
               );
             },
           },
-          { label: 'WERTENTWICKLUNG', id: 2, panel: sp },
+          { label: 'WERTENTWICKLUNG', id: 2, panel: yp },
           {
             label: 'PORTFOLIO',
             id: 3,
@@ -55703,9 +55794,9 @@
             },
           },
         ],
-        $p = function (e) {
+        ng = function (e) {
           var t = e.apiKey,
-            n = (0, i.useState)(Qp[0].id),
+            n = (0, i.useState)(tg[0].id),
             r = (0, ne.Z)(n, 2),
             a = r[0],
             o = r[1],
@@ -55715,22 +55806,22 @@
               t = e[e.length - 1];
             return t ? t.params : {};
           })().id;
-          return (0, Rr.jsxs)(Up, {
+          return (0, Rr.jsxs)(Jp, {
             children: [
-              (0, Rr.jsx)(qp, {
+              (0, Rr.jsx)(eg, {
                 className: '_Tabs theme_01',
                 value: a,
                 orientation: s ? 'vertical' : 'horizontal',
                 onChange: function (e, t) {
                   o(t);
                 },
-                children: Qp.map(function (e, t) {
+                children: tg.map(function (e, t) {
                   var n = e.label,
                     i = e.id;
                   return (0, Rr.jsx)(nd, { sx: { fontWeight: 400 }, value: i, label: n }, t);
                 }),
               }),
-              Qp.map(function (e) {
+              tg.map(function (e) {
                 var n = e.id,
                   r = e.panel;
                 return (0,
@@ -55739,43 +55830,6 @@
             ],
           });
         },
-        Kp = Eu(
-          _p ||
-            (_p = $r([
-              '\n  query getCdnWidgets($widgetId: String!) {\n    getCdnWidgets(widgetId: $widgetId) {\n      data\n    }\n  }\n',
-            ]))
-        ),
-        Jp = Eu(
-          Tp ||
-            (Tp = $r([
-              '\n  query getTable($param: tableParam) {\n    getTable(param: $param) {\n      data\n    }\n  }\n',
-            ]))
-        ),
-        eg =
-          (Eu(
-            Pp ||
-              (Pp = $r([
-                '\n  query getCell($param: tableParam) {\n    getCell(param: $param) {\n      data\n    }\n  }\n',
-              ]))
-          ),
-          Eu(
-            Op ||
-              (Op = $r([
-                '\n  query getAutomatedColumns($param: automatedColumConfigs) {\n    getAutomatedColumns(param: $param)\n  }\n',
-              ]))
-          )),
-        tg = Eu(
-          Mp ||
-            (Mp = $r([
-              '\n  query getAutomaticTable($param: String!, $fields: [automatedTableField], $limit: String) {\n    getAutomaticTable(param: $param, fields: $fields, limit: $limit) {\n      data\n    }\n  }\n',
-            ]))
-        ),
-        ng = Eu(
-          Ip ||
-            (Ip = $r([
-              '\n  query getAutomatedBarChart($isin: String, $type: String) {\n    getAutomatedBarChart(isin: $isin, type: $type) {\n      isin\n      type\n      end\n      value\n    }\n  }\n',
-            ]))
-        ),
         ig = {
           '#ccd5df': ['#0461b8', '#165b9d', '#275681', '#395066', '#4a4a4a'],
           '#d0bb8c': ['#0461b8', '#165b9d', '#275681', '#395066', '#4a4a4a'],
@@ -55973,7 +56027,7 @@
                         case 0:
                           return e.abrupt(
                             'return',
-                            kg.query({ query: eg, variables: { param: { data: t, isin: n } } })
+                            kg.query({ query: fp, variables: { param: { data: t, isin: n } } })
                           );
                         case 1:
                         case 'end':
@@ -56083,7 +56137,7 @@
                           return e.abrupt(
                             'return',
                             kg.query({
-                              query: ng,
+                              query: gp,
                               variables: {
                                 isin: null === t || void 0 === t ? void 0 : t.isin,
                                 type: null === t || void 0 === t ? void 0 : t.automationType,
@@ -56300,7 +56354,7 @@
                         case 0:
                           return e.abrupt(
                             'return',
-                            kg.query({ query: Jp, variables: { param: { type: t, isin: o } } })
+                            kg.query({ query: hp, variables: { param: { type: t, isin: o } } })
                           );
                         case 1:
                         case 'end':
@@ -56322,7 +56376,7 @@
                         case 0:
                           return e.abrupt(
                             'return',
-                            kg.query({ query: tg, variables: { param: t, fields: n, limit: i } })
+                            kg.query({ query: pp, variables: { param: t, fields: n, limit: i } })
                           );
                         case 1:
                         case 'end':
@@ -56344,7 +56398,7 @@
                         case 0:
                           return e.abrupt(
                             'return',
-                            kg.query({ query: eg, variables: { param: { data: t, isin: o } } })
+                            kg.query({ query: fp, variables: { param: { data: t, isin: o } } })
                           );
                         case 1:
                         case 'end':
@@ -56819,7 +56873,7 @@
                         case 0:
                           return e.abrupt(
                             'return',
-                            kg.query({ query: tg, variables: { param: t, fields: n, limit: i } })
+                            kg.query({ query: pp, variables: { param: t, fields: n, limit: i } })
                           );
                         case 1:
                         case 'end':
@@ -56935,7 +56989,7 @@
                 case 'text-row':
                   return (0, Rr.jsx)(lg, { content: n, color: a, isin: r });
                 case 'history':
-                  return (0, Rr.jsx)(sp, { content: n, isin: r, color: a });
+                  return (0, Rr.jsx)(yp, { content: n, isin: r, color: a });
                 case 'document-list':
                   return (0, Rr.jsx)(ug, { content: n, color: a });
                 case 'table':
@@ -56995,7 +57049,7 @@
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          return e.abrupt('return', kg.query({ query: Kp, variables: { widgetId: t } }));
+                          return e.abrupt('return', kg.query({ query: dp, variables: { widgetId: t } }));
                         case 1:
                         case 'end':
                           return e.stop();
@@ -57058,10 +57112,10 @@
             [t]
           );
           return 'tab' === m
-            ? (0, Rr.jsxs)(Up, {
+            ? (0, Rr.jsxs)(Jp, {
                 className: 'box_'.concat(D),
                 children: [
-                  (0, Rr.jsx)(qp, {
+                  (0, Rr.jsx)(eg, {
                     className: '_Tabs '.concat(D),
                     sx: P
                       ? {
@@ -57118,8 +57172,8 @@
               });
         },
         yg = Eu(
-          Dp ||
-            (Dp = $r(['\n  extend type Content {\n    id: String\n    label: String\n    content: [Content]\n  }\n']))
+          zp ||
+            (zp = $r(['\n  extend type Content {\n    id: String\n    label: String\n    content: [Content]\n  }\n']))
         ),
         bg = Re(function (e) {
           e.graphqlErrors &&
@@ -57141,7 +57195,7 @@
                   return [
                     { page: 'performance', component: ju },
                     { page: 'value', component: Hu },
-                    { page: 'factsheet', component: $p },
+                    { page: 'factsheet', component: ng },
                   ].concat((0, ie.Z)(e ? [{ page: 'test', component: mg }] : []));
                 })(r).find(function (e) {
                   return e.page === (r ? 'test' : a);
