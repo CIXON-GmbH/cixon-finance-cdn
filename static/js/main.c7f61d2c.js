@@ -53123,7 +53123,6 @@
                 position: 'bottom',
               },
               annotations: {
-                yaxis: [{ y: 30, borderColor: n, label: { text: 'Support', style: { color: '#fff', background: n } } }],
                 xaxis: [
                   {
                     borderColor: n,
