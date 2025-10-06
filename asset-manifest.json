@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.eea45e82.js",
+    "main.js": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.f98315ee.js",
     "index.html": "https://cixon-gmbh.github.io/cixon-finance-cdn/index.html",
-    "main.eea45e82.js.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.eea45e82.js.map"
+    "main.f98315ee.js.map": "https://cixon-gmbh.github.io/cixon-finance-cdn/static/js/main.f98315ee.js.map"
   },
   "entrypoints": [
-    "static/js/main.eea45e82.js"
+    "static/js/main.f98315ee.js"
   ]
 }
